@@ -1,0 +1,26 @@
+.background-blood-gradient {
+  background: linear-gradient(135deg, #800000, #b30000, #ff4c4c);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.form-control {
+  border: 1px solid #ff4c4c;
+}
+
+.btn-danger {
+  background-color: #ff4c4c;
+  border-color: #b30000;
+}
+
+.btn-danger:hover {
+  background-color: #b30000;
+  border-color: #800000;
+}
