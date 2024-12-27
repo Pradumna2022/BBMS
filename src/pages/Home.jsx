@@ -1,4 +1,7 @@
 import React from 'react';
+import blooddonation from '../assets/img/Blood-Donation.jpg';
+import bloodrequest from '../assets/img/blood-request.jpg';
+import bloodtrack from '../assets/img/blood-track.jpg';
 
 const Home = () => {
     return (
@@ -8,7 +11,7 @@ const Home = () => {
                 <div className="container">
                     <h1 className="display-4 fw-bold">Save Lives with Every Drop</h1>
                     <p className="lead">Join us in making a difference by donating blood and helping those in need.</p>
-                    <a href="#services" className="btn btn-danger btn-lg mt-3">Get Started</a>
+                    <a href="#get-started" className="btn btn-danger btn-lg mt-3 hadow-sm rounded-pill">Get Started</a>
                 </div>
             </section>
 
@@ -21,7 +24,7 @@ const Home = () => {
                     </p>
                     <div className="row mt-5">
                         <div className="col-md-4">
-                        <svg  className="rounded-circle mb-3" width="150px" height="150px" viewBox="-1.28 -1.28 18.56 18.56" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#740202" stroke-width="0.16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9.25 3.75C9.25 4.44036 8.69036 5 8 5C7.30964 5 6.75 4.44036 6.75 3.75C6.75 3.05964 7.30964 2.5 8 2.5C8.69036 2.5 9.25 3.05964 9.25 3.75ZM12 8H9.41901L11.2047 13H9.081L8 9.97321L6.91901 13H4.79528L6.581 8H4V6H12V8Z" fill="#b60707"></path> </g></svg>
+                            <svg className="rounded-circle mb-3" width="150px" height="150px" viewBox="-1.28 -1.28 18.56 18.56" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#740202" stroke-width="0.16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9.25 3.75C9.25 4.44036 8.69036 5 8 5C7.30964 5 6.75 4.44036 6.75 3.75C6.75 3.05964 7.30964 2.5 8 2.5C8.69036 2.5 9.25 3.05964 9.25 3.75ZM12 8H9.41901L11.2047 13H9.081L8 9.97321L6.91901 13H4.79528L6.581 8H4V6H12V8Z" fill="#b60707"></path> </g></svg>
                             <h5>Safe Donations</h5>
                             <p>We ensure that all donations are handled securely and safely.</p>
                         </div>
@@ -39,32 +42,74 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Get started Section */}
+            <section id="get-started" className="py-5 bg-light">
+                <div className="container text-center">
+                    <h2 className="mb-4">Get Started</h2>
+                    <p className="mb-4">
+                        Join us today and make a difference! Whether you're looking to register as a donor or access our services, we're here to help.
+                    </p>
+                    <div className="d-flex justify-content-center gap-3 flex-wrap">
+                        <a
+                            href="/register"
+                            className="btn btn-danger btn-lg px-4 py-2 shadow-sm rounded-pill"
+                        >
+                            Register
+                        </a>
+                        <a
+                            href="/login"
+                            className="btn btn-outline-danger btn-lg px-4 py-2 shadow-sm rounded-pill"
+                        >
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             {/* Services Section */}
             <section id="services" className="py-5">
                 <div className="container text-center">
                     <h2 className="mb-4">Our Services</h2>
                     <div className="row">
-                        <div className="col-md-4">
-                            <div className="card shadow-sm">
-                                <img src="https://via.placeholder.com/300x200" className="card-img-top" alt="Donor Management" />
+                        <div className="col-md-4 col-sm-6 mb-4">
+                            <div className="card shadow-sm h-100">
+                                <div className="card-img-container">
+                                    <img
+                                        src={blooddonation}
+                                        className="card-img-top img-fluid"
+                                        alt="Donor Management"
+                                    />
+                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title">Donor Management</h5>
                                     <p className="card-text">Track and manage registered donors efficiently.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="card shadow-sm">
-                                <img src="https://via.placeholder.com/300x200" className="card-img-top" alt="Blood Requests" />
+                        <div className="col-md-4 col-sm-6 mb-4">
+                            <div className="card shadow-sm h-100">
+                                <div className="card-img-container">
+                                    <img
+                                        src={bloodrequest}
+                                        className="card-img-top img-fluid"
+                                        alt="Blood Requests"
+                                    />
+                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title">Blood Requests</h5>
                                     <p className="card-text">Handle blood requests seamlessly and quickly.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="card shadow-sm">
-                                <img src="https://via.placeholder.com/300x200" className="card-img-top" alt="Real-Time Tracking" />
+                        <div className="col-md-4 col-sm-6 mb-4">
+                            <div className="card shadow-sm h-100">
+                                <div className="card-img-container">
+                                    <img
+                                        src={bloodtrack}
+                                        className="card-img-top img-fluid"
+                                        alt="Real-Time Tracking"
+                                    />
+                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title">Real-Time Tracking</h5>
                                     <p className="card-text">Monitor donations and requests in real time.</p>
@@ -74,6 +119,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
 
             {/* Contact Section */}
             <section id="contact" className="bg-light py-5">
@@ -92,7 +138,7 @@ const Home = () => {
                         <div className="mb-3">
                             <textarea className="form-control" rows="4" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" className="btn btn-danger">Send Message</button>
+                        <button type="submit" className="btn btn-danger hadow-sm rounded-pill">Send Message</button>
                     </form>
                 </div>
             </section>

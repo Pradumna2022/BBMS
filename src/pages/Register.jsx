@@ -1,10 +1,10 @@
-import React from 'react';
-import '../assets/css/Register.css'; // Optional: For managing styles better in an external file
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Login() {
-    return (
-        <section className="background-blood-gradient overflow-hidden">
+function Register() {
+  return (
+    <>
+     <section className="background-blood-gradient overflow-hidden">
             <div className="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
                 <div className="row gx-lg-5 align-items-center mb-5">
                     <div className="col-lg-6 mb-5 mb-lg-0" style={{ zIndex: 10 }}>
@@ -26,7 +26,7 @@ function Login() {
                             <div className="card-body px-4 py-5 px-md-5">
                                 <form>
                                     {/* First and Last Name */}
-                                    {/* <div className="row">
+                                    <div className="row">
                                         <div className="col-md-6 mb-4">
                                             <div className="form-outline">
                                                 <label className="form-label text-light" htmlFor="form3Example1">
@@ -43,14 +43,21 @@ function Login() {
                                                 <input type="text" id="form3Example2" className="form-control text-light bg-transparent" />
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
 
                                     {/* Email */}
                                     <div className="form-outline mb-4">
                                         <label className="form-label text-light" htmlFor="form3Example3">
-                                            Email address or Phone number
+                                            Email address
                                         </label>
                                         <input type="email" id="form3Example3" className="form-control text-light bg-transparent" />
+                                    </div>
+                                     {/* Phone number */}
+                                     <div className="form-outline mb-4">
+                                        <label className="form-label text-light" htmlFor="form3Example3">
+                                           Phone number
+                                        </label>
+                                        <input type="number" id="form3Example3" className="form-control text-light bg-transparent" />
                                     </div>
 
                                     {/* Password */}
@@ -64,11 +71,11 @@ function Login() {
                                     {/* Submit Button */}
                                     <div class="d-flex justify-content-center">
                                         <div>
-                                            <button type="submit" className="btn btn-danger btn-block mb-4">Sign in</button>
+                                            <button type="submit" className="btn btn-danger btn-block mb-4">Register</button>
                                         </div>
                                     </div>
                                     <div className='text-center' style={{ color: '#f8d7da' }}>
-                                        <p>Do't have account Then please<span><Link to='/register'  style={{ color: '#ff4c4c' }}> Register here</Link></span></p>
+                                        <p>Have an account Then please<span><Link to='/login'  style={{ color: '#ff4c4c' }}> Login here</Link></span></p>
                                     </div>
 
                                 </form>
@@ -78,7 +85,8 @@ function Login() {
                 </div>
             </div>
         </section>
-    );
+    </>
+  )
 }
 
-export default Login;
+export default Register

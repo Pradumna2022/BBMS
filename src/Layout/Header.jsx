@@ -1,12 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import usericon from '../assets/img/user-icon-svgrepo-com.png'
+import logoicon from '../assets/img/icon.svg'
 
 const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg shadow-lg">
             <div className="container">
-                <Link className="navbar-brand" to="/">Blood Bank</Link>
+                <div className="navbar-brand-container" style={{ textAlign: 'center' }}>
+                    <Link className="navbar-brand d-flex align-items-center" to="/" style={{ textDecoration: 'none', color: '#ff0000' }}>
+                        <img src={logoicon} alt="Logo" style={{ width: '40px', height: '40px' }} />
+                        <span style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>Blood Bank</span>
+                    </Link>
+                    <p style={{ marginTop: '-16px',marginLeft:"20px", fontSize: '0.54rem', color: '#555' }}>
+                        Save Lives with Every Drop
+                    </p>
+                </div>
+
+
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,9 +26,9 @@ const Header = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/login">Login</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link className="nav-link" to="/login">Admin</Link>
                         </li>
@@ -30,7 +41,7 @@ const Header = () => {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                
+
                                 <img
                                     src={usericon}
                                     className="rounded-circle"
