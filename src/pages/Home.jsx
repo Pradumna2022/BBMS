@@ -2,6 +2,7 @@ import React from 'react';
 import blooddonation from '../assets/img/Blood-Donation.jpg';
 import bloodrequest from '../assets/img/blood-request.jpg';
 import bloodtrack from '../assets/img/blood-track.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -50,18 +51,18 @@ const Home = () => {
                         Join us today and make a difference! Whether you're looking to register as a donor or access our services, we're here to help.
                     </p>
                     <div className="d-flex justify-content-center gap-3 flex-wrap">
-                        <a
-                            href="/register"
+                        <Link
+                            to="/register"
                             className="btn btn-danger btn-lg px-4 py-2 shadow-sm rounded-pill"
                         >
                             Register
-                        </a>
-                        <a
-                            href="/login"
+                        </Link>
+                        <Link
+                            to="/login"
                             className="btn btn-outline-danger btn-lg px-4 py-2 shadow-sm rounded-pill"
                         >
                             Login
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
